@@ -78,6 +78,10 @@
 </main>
 
 <style lang="css">
+  :root {
+    --num-columns: 3;
+  }
+
   :global(*:not(html, body)) {
     font-size: 16px;
     line-height: 16px;
@@ -96,7 +100,19 @@
   }
 
   main {
-    column-count: 3;
+    column-count: var(--num-columns);
+  }
+
+  @media (max-width: 750px) {
+    :root {
+      --num-columns: 2;
+    }
+  }
+
+  @media (max-width: 550px) {
+    :root {
+      --num-columns: 1;
+    }
   }
 
   :global(main > *) {

@@ -60,6 +60,7 @@
     </nav>
   </Dropdown>
 </header>
+<hr />
 <main>
   {#each $cards as card}
     <Card>
@@ -95,9 +96,14 @@
   }
 
   main {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+    column-count: 3;
+  }
+
+  :global(main > *) {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    break-inside: avoid;
+    margin-bottom: 1em;
   }
 
   nav {

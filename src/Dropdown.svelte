@@ -36,5 +36,7 @@
 
   aside {
     position: absolute;
+    background-color: white;
+    z-index: 1;
   }
 </style>

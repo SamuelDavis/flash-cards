@@ -1,0 +1,965 @@
+[
+  {
+    "heading": "Global",
+    "items": [
+      {
+        "description": "open help for keyword",
+        "answers": [[":h[elp] keyword"]]
+      },
+      {
+        "description": "save file as",
+        "answers": [[":sav[eas] file"]]
+      },
+      {
+        "description": "close current pane",
+        "answers": [[":clo[se]"]]
+      },
+      {
+        "description": "open a terminal window",
+        "answers": [[":ter[minal]"]]
+      },
+      {
+        "description": "open man page for word under the cursor",
+        "answers": [["<shift>", "k"]]
+      }
+    ]
+  },
+  {
+    "heading": "Cursor movement",
+    "items": [
+      {
+        "description": "move cursor left",
+        "answers": [["h"]]
+      },
+      {
+        "description": "move cursor down",
+        "answers": [["j"]]
+      },
+      {
+        "description": "move cursor up",
+        "answers": [["k"]]
+      },
+      {
+        "description": "move cursor right",
+        "answers": [["l"]]
+      },
+      {
+        "description": "move to top of screen",
+        "answers": [["<shift>", "h"]]
+      },
+      {
+        "description": "move to middle of screen",
+        "answers": [["<shift>", "m"]]
+      },
+      {
+        "description": "move to bottom of screen",
+        "answers": [["<shift>", "l"]]
+      },
+      {
+        "description": "jump forwards to the start of a word",
+        "answers": [["w"]]
+      },
+      {
+        "description": "jump forwards to the start of a word (words can contain punctuation)",
+        "answers": [["<shift>", "w"]]
+      },
+      {
+        "description": "jump forwards to the end of a word",
+        "answers": [["e"]]
+      },
+      {
+        "description": "jump forwards to the end of a word (words can contain punctuation)",
+        "answers": [["<shift>", "e"]]
+      },
+      {
+        "description": "jump backwards to the start of a word",
+        "answers": [["b"]]
+      },
+      {
+        "description": "jump backwards to the start of a word (words can contain punctuation)",
+        "answers": [["<shift>", "b"]]
+      },
+      {
+        "description": "jump backwards to the end of a word",
+        "answers": [["g", "e"]]
+      },
+      {
+        "description": "jump backwards to the end of a word (words can contain punctuation)",
+        "answers": [["g", "<shift>", "e"]]
+      },
+      {
+        "description": "move to matching character (default supported pairs: '()', '{}', '[]' - use :h matchpairs in vim for more info)",
+        "answers": [["%"]]
+      },
+      {
+        "description": "jump to the start of the line",
+        "answers": [["0"]]
+      },
+      {
+        "description": "jump to the first non-blank character of the line",
+        "answers": [["^"]]
+      },
+      {
+        "description": "jump to the end of the line",
+        "answers": [["$"]]
+      },
+      {
+        "description": "jump to the last non-blank character of the line",
+        "answers": [["g", "_"]]
+      },
+      {
+        "description": "go to the first line of the document",
+        "answers": [["g", "g"]]
+      },
+      {
+        "description": "go to the last line of the document",
+        "answers": [["<shift>", "g"]]
+      },
+      {
+        "description": "go to line 5",
+        "answers": [
+          ["5", "g", "g"],
+          ["5", "<shift>", "g"]
+        ]
+      },
+      {
+        "description": "move to local declaration",
+        "answers": [["g", "d"]]
+      },
+      {
+        "description": "move to global declaration",
+        "answers": [["g", "<shift>", "d"]]
+      },
+      {
+        "description": "jump to next occurrence of character x",
+        "answers": [["f", "x"]]
+      },
+      {
+        "description": "jump to before next occurrence of character x",
+        "answers": [["t", "x"]]
+      },
+      {
+        "description": "jump to previous occurence of character x",
+        "answers": [["<shift>", "f", "x"]]
+      },
+      {
+        "description": "jump to after previous occurence of character x",
+        "answers": [["<shift>", "t", "x"]]
+      },
+      {
+        "description": "repeat previous f, t, F or T movement",
+        "answers": [[";"]]
+      },
+      {
+        "description": "repeat previous f, t, F or T movement, backwards",
+        "answers": [[","]]
+      },
+      {
+        "description": "jump to next paragraph (or function/block, when editing code)",
+        "answers": [["}"]]
+      },
+      {
+        "description": "jump to previous paragraph (or function/block, when editing code)",
+        "answers": [["{"]]
+      },
+      {
+        "description": "center cursor on screen",
+        "answers": [["z", "z"]]
+      },
+      {
+        "description": "move screen down one line (without moving cursor)",
+        "answers": [["<ctrl>", "e"]]
+      },
+      {
+        "description": "move screen up one line (without moving cursor)",
+        "answers": [["<ctrl>", "y"]]
+      },
+      {
+        "description": "move back one full screen",
+        "answers": [["<ctrl>", "b"]]
+      },
+      {
+        "description": "move forward one full screen",
+        "answers": [["<ctrl>", "f"]]
+      },
+      {
+        "description": "move forward 1/2 a screen",
+        "answers": [["<ctrl>", "d"]]
+      },
+      {
+        "description": "move back 1/2 a screen",
+        "answers": [["<ctrl>", "u"]]
+      }
+    ]
+  },
+  {
+    "heading": "Insert mode - inserting/appending text",
+    "items": [
+      {
+        "description": "insert before the cursor",
+        "answers": [["i"]]
+      },
+      {
+        "description": "insert at the beginning of the line",
+        "answers": [["<shift>", "i"]]
+      },
+      {
+        "description": "insert (append) after the cursor",
+        "answers": [["a"]]
+      },
+      {
+        "description": "insert (append) at the end of the line",
+        "answers": [["<shift>", "a"]]
+      },
+      {
+        "description": "append (open) a new line below the current line",
+        "answers": [["o"]]
+      },
+      {
+        "description": "append (open) a new line above the current line",
+        "answers": [["<shift>", "o"]]
+      },
+      {
+        "description": "insert (append) at the end of the word",
+        "answers": [["e", "a"]]
+      },
+      {
+        "description": "delete the character before the cursor during insert mode",
+        "answers": [["<ctrl>", "h"]]
+      },
+      {
+        "description": "delete word before the cursor during insert mode",
+        "answers": [["<ctrl>", "w"]]
+      },
+      {
+        "description": "begin new line during insert mode",
+        "answers": [["<ctrl>", "j"]]
+      },
+      {
+        "description": "indent (move right) line one shiftwidth during insert mode",
+        "answers": [["<ctrl>", "t"]]
+      },
+      {
+        "description": "de-indent (move left) line one shiftwidth during insert mode",
+        "answers": [["<ctrl>", "d"]]
+      },
+      {
+        "description": "insert (auto-complete) next match before the cursor during insert mode",
+        "answers": [["<ctrl>", "n"]]
+      },
+      {
+        "description": "insert (auto-complete) previous match before the cursor during insert mode",
+        "answers": [["<ctrl>", "p"]]
+      },
+      {
+        "description": "insert the contents of register x",
+        "answers": [["<ctrl>", "r", "x"]]
+      },
+      {
+        "description": "Temporarily enter normal mode to issue one normal-mode command x.",
+        "answers": [["<ctrl>", "o", "x"]]
+      },
+      {
+        "description": "exit insert mode",
+        "answers": [["<shift>", "e", "s", "c"]]
+      }
+    ]
+  },
+  {
+    "heading": "Editing",
+    "items": [
+      {
+        "description": "replace a single character.",
+        "answers": [["r"]]
+      },
+      {
+        "description": "replace more than one character, until ESC is pressed.",
+        "answers": [["<shift>", "r"]]
+      },
+      {
+        "description": "join line below to the current one with one space in between",
+        "answers": [["<shift>", "j"]]
+      },
+      {
+        "description": "join line below to the current one without space in between",
+        "answers": [["g", "<shift>", "j"]]
+      },
+      {
+        "description": "reflow paragraph",
+        "answers": [["g", "w", "i", "p"]]
+      },
+      {
+        "description": "switch case up to motion",
+        "answers": [["g", "~"]]
+      },
+      {
+        "description": "change to lowercase up to motion",
+        "answers": [["g", "u"]]
+      },
+      {
+        "description": "change to uppercase up to motion",
+        "answers": [["g", "<shift>", "u"]]
+      },
+      {
+        "description": "change (replace) entire line",
+        "answers": [["c", "c"]]
+      },
+      {
+        "description": "change (replace) to the end of the line",
+        "answers": [["<shift>", "c"]]
+      },
+      {
+        "description": "change (replace) to the end of the line",
+        "answers": [["c", "$"]]
+      },
+      {
+        "description": "change (replace) entire word",
+        "answers": [["c", "i", "w"]]
+      },
+      {
+        "description": "change (replace) to the end of the word",
+        "answers": [
+          ["c", "w"],
+          ["c", "e"]
+        ]
+      },
+      {
+        "description": "delete character and substitute text",
+        "answers": [["s"]]
+      },
+      {
+        "description": "delete line and substitute text (same as cc)",
+        "answers": [["<shift>", "s"]]
+      },
+      {
+        "description": "transpose two letters (delete and paste)",
+        "answers": [["x", "p"]]
+      },
+      {
+        "description": "undo",
+        "answers": [["u"]]
+      },
+      {
+        "description": "restore (undo) last changed line",
+        "answers": [["<shift>", "u"]]
+      },
+      {
+        "description": "redo",
+        "answers": [["<ctrl>", "r"]]
+      },
+      {
+        "description": "repeat last command",
+        "answers": [["."]]
+      }
+    ]
+  },
+  {
+    "heading": "Marking text (visual mode)",
+    "items": [
+      {
+        "description": "start visual mode, mark lines, then do a command (like y-yank)",
+        "answers": [["v"]]
+      },
+      {
+        "description": "start linewise visual mode",
+        "answers": [["<shift>", "v"]]
+      },
+      {
+        "description": "move to other end of marked area",
+        "answers": [["o"]]
+      },
+      {
+        "description": "start visual block mode",
+        "answers": [["<ctrl>", "v"]]
+      },
+      {
+        "description": "move to other corner of block",
+        "answers": [["<shift>", "o"]]
+      },
+      {
+        "description": "mark a word",
+        "answers": [["a", "w"]]
+      },
+      {
+        "description": "a block with ()",
+        "answers": [["a", "b"]]
+      },
+      {
+        "description": "a block with {}",
+        "answers": [["a", "<shift>", "b"]]
+      },
+      {
+        "description": "a block with <> tags",
+        "answers": [["a", "t"]]
+      },
+      {
+        "description": "inner block with ()",
+        "answers": [["i", "b"]]
+      },
+      {
+        "description": "inner block with {}",
+        "answers": [["i", "<shift>", "b"]]
+      },
+      {
+        "description": "inner block with <> tags",
+        "answers": [["i", "t"]]
+      },
+      {
+        "description": "exit visual mode",
+        "answers": [["<shift>", "e", "s", "c"]]
+      }
+    ]
+  },
+  {
+    "heading": "Visual commands",
+    "items": [
+      {
+        "description": "shift text right",
+        "answers": [[">"]]
+      },
+      {
+        "description": "shift text left",
+        "answers": [["<"]]
+      },
+      {
+        "description": "yank (copy) marked text",
+        "answers": [["y"]]
+      },
+      {
+        "description": "delete marked text",
+        "answers": [["d"]]
+      },
+      {
+        "description": "switch case",
+        "answers": [["~"]]
+      },
+      {
+        "description": "change marked text to lowercase",
+        "answers": [["u"]]
+      },
+      {
+        "description": "change marked text to uppercase",
+        "answers": [["<shift>", "u"]]
+      }
+    ]
+  },
+  {
+    "heading": "Registers",
+    "items": [
+      {
+        "description": "show registers content",
+        "answers": [[":reg[isters]"]]
+      },
+      {
+        "description": "yank into register x",
+        "answers": [["\"xy"]]
+      },
+      {
+        "description": "paste contents of register x",
+        "answers": [["\"xp"]]
+      },
+      {
+        "description": "yank into the system clipboard register",
+        "answers": [["\"+y"]]
+      },
+      {
+        "description": "paste from the system clipboard register",
+        "answers": [["\"+p"]]
+      }
+    ]
+  },
+  {
+    "heading": "Marks and positions",
+    "items": [
+      {
+        "description": "list of marks",
+        "answers": [[":marks"]]
+      },
+      {
+        "description": "set current position for mark A",
+        "answers": [["m", "a"]]
+      },
+      {
+        "description": "jump to position of mark A",
+        "answers": [["`a"]]
+      },
+      {
+        "description": "yank text to position of mark A",
+        "answers": [["y", "`", "a"]]
+      },
+      {
+        "description": "go to the position where Vim was previously exited",
+        "answers": [["`0"]]
+      },
+      {
+        "description": "go to the position when last editing this file",
+        "answers": [["`\""]]
+      },
+      {
+        "description": "go to the position of the last change in this file",
+        "answers": [["`."]]
+      },
+      {
+        "description": "go to the position before the last jump",
+        "answers": [["``"]]
+      },
+      {
+        "description": "list of jumps",
+        "answers": [[":ju[mps]"]]
+      },
+      {
+        "description": "go to newer position in jump list",
+        "answers": [["<ctrl>", "i"]]
+      },
+      {
+        "description": "go to older position in jump list",
+        "answers": [["<ctrl>", "o"]]
+      },
+      {
+        "description": "list of changes",
+        "answers": [[":changes"]]
+      },
+      {
+        "description": "go to newer position in change list",
+        "answers": [["g", ","]]
+      },
+      {
+        "description": "go to older position in change list",
+        "answers": [["g", ";"]]
+      },
+      {
+        "description": "jump to the tag under cursor",
+        "answers": [["<ctrl>", "]"]]
+      }
+    ]
+  },
+  {
+    "heading": "Macros",
+    "items": [
+      {
+        "description": "record macro a",
+        "answers": [["q", "a"]]
+      },
+      {
+        "description": "stop recording macro",
+        "answers": [["q"]]
+      },
+      {
+        "description": "run macro a",
+        "answers": [["@a"]]
+      },
+      {
+        "description": "rerun last run macro",
+        "answers": [["@@"]]
+      }
+    ]
+  },
+  {
+    "heading": "Cut and paste",
+    "items": [
+      {
+        "description": "yank (copy) a line",
+        "answers": [["y", "y"]]
+      },
+      {
+        "description": "yank (copy) 2 lines",
+        "answers": [["2", "y", "y"]]
+      },
+      {
+        "description": "yank (copy) the characters of the word from the cursor position to the start of the next word",
+        "answers": [["y", "w"]]
+      },
+      {
+        "description": "yank (copy) word under the cursor",
+        "answers": [["y", "i", "w"]]
+      },
+      {
+        "description": "yank (copy) word under the cursor and the space after or before it",
+        "answers": [["y", "a", "w"]]
+      },
+      {
+        "description": "yank (copy) to end of line",
+        "answers": [["y", "$"]]
+      },
+      {
+        "description": "put (paste) the clipboard after cursor",
+        "answers": [["p"]]
+      },
+      {
+        "description": "put (paste) before cursor",
+        "answers": [["<shift>", "p"]]
+      },
+      {
+        "description": "put (paste) the clipboard after cursor and leave cursor after the new text",
+        "answers": [["g", "p"]]
+      },
+      {
+        "description": "put (paste) before cursor and leave cursor after the new text",
+        "answers": [["g", "<shift>", "p"]]
+      },
+      {
+        "description": "delete (cut) a line",
+        "answers": [["d", "d"]]
+      },
+      {
+        "description": "delete (cut) 2 lines",
+        "answers": [["2", "d", "d"]]
+      },
+      {
+        "description": "delete (cut) the characters of the word from the cursor position to the start of the next word",
+        "answers": [["d", "w"]]
+      },
+      {
+        "description": "delete (cut) word under the cursor",
+        "answers": [["d", "i", "w"]]
+      },
+      {
+        "description": "delete (cut) word under the cursor and the space after or before it",
+        "answers": [["d", "a", "w"]]
+      },
+      {
+        "description": "delete (cut) to the end of the line",
+        "answers": [["<shift>", "d"]]
+      },
+      {
+        "description": "delete (cut) to the end of the line",
+        "answers": [["d", "$"]]
+      },
+      {
+        "description": "delete (cut) character",
+        "answers": [["x"]]
+      }
+    ]
+  },
+  {
+    "heading": "Indent text",
+    "items": [
+      {
+        "description": "indent (move right) line one shiftwidth",
+        "answers": [[">>"]]
+      },
+      {
+        "description": "de-indent (move left) line one shiftwidth",
+        "answers": [["<<"]]
+      },
+      {
+        "description": "indent a block with () or {} (cursor on brace)",
+        "answers": [[">%"]]
+      },
+      {
+        "description": "indent inner block with ()",
+        "answers": [[">ib"]]
+      },
+      {
+        "description": "indent a block with <> tags",
+        "answers": [[">at"]]
+      },
+      {
+        "description": "re-indent 3 lines",
+        "answers": [["3", "=", "="]]
+      },
+      {
+        "description": "re-indent a block with () or {} (cursor on brace)",
+        "answers": [["=%"]]
+      },
+      {
+        "description": "re-indent inner block with {}",
+        "answers": [["=iB"]]
+      },
+      {
+        "description": "re-indent entire buffer",
+        "answers": [["g", "g", "=", "<shift>", "g"]]
+      },
+      {
+        "description": "paste and adjust indent to current line",
+        "answers": [["]p"]]
+      }
+    ]
+  },
+  {
+    "heading": "Exiting",
+    "items": [
+      {
+        "description": "write (save) the file, but don't exit",
+        "answers": [[":w"]]
+      },
+      {
+        "description": "write out the current file using sudo",
+        "answers": [[":w !sudo tee %"]]
+      },
+      {
+        "description": "write (save) and quit",
+        "answers": [[":wq"], [":x"], ["<shift>", "z", "<shift>", "z"]]
+      },
+      {
+        "description": "quit (fails if there are unsaved changes)",
+        "answers": [[":q"]]
+      },
+      {
+        "description": "quit and throw away unsaved changes",
+        "answers": [[":q!"], ["<shift>", "z", "<shift>", "q"]]
+      },
+      {
+        "description": "write (save) and quit on all tabs",
+        "answers": [[":wqa"]]
+      }
+    ]
+  },
+  {
+    "heading": "Search and replace",
+    "items": [
+      {
+        "description": "search for pattern",
+        "answers": [["/pattern"]]
+      },
+      {
+        "description": "search backward for pattern",
+        "answers": [["?pattern"]]
+      },
+      {
+        "description": "'very magic' pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)",
+        "answers": [["\\vpattern"]]
+      },
+      {
+        "description": "repeat search in same direction",
+        "answers": [["n"]]
+      },
+      {
+        "description": "repeat search in opposite direction",
+        "answers": [["<shift>", "n"]]
+      },
+      {
+        "description": "replace all old with new throughout file",
+        "answers": [[":%s/old/new/g"]]
+      },
+      {
+        "description": "replace all old with new throughout file with confirmations",
+        "answers": [[":%s/old/new/gc"]]
+      },
+      {
+        "description": "remove highlighting of search matches",
+        "answers": [[":noh[lsearch]"]]
+      }
+    ]
+  },
+  {
+    "heading": "Search in multiple files",
+    "items": [
+      {
+        "description": "search for pattern in multiple files",
+        "answers": [[":vim[grep] /pattern/ {`{file}`}"]]
+      }
+    ]
+  },
+  {
+    "heading": "Tabs",
+    "items": [
+      {
+        "description": "open a file in a new tab",
+        "answers": [[":tabnew"], [":tabnew {page.words.file}"]]
+      },
+      {
+        "description": "move the current split window into its own tab",
+        "answers": [["<ctrl>", "w", "<shift>", "t"]]
+      },
+      {
+        "description": "move to the next tab",
+        "answers": [["g", "t"], [":tabn[ext]"]]
+      },
+      {
+        "description": "move to the previous tab",
+        "answers": [["g", "<shift>", "t"], [":tabp[revious]"]]
+      },
+      {
+        "description": "move to tab number #",
+        "answers": [["#gt"]]
+      },
+      {
+        "description": "move current tab to the #th position (indexed from 0)",
+        "answers": [[":tabm[ove] #"]]
+      },
+      {
+        "description": "close the current tab and all its windows",
+        "answers": [[":tabc[lose]"]]
+      },
+      {
+        "description": "close all tabs except for the current one",
+        "answers": [[":tabo[nly]"]]
+      },
+      {
+        "description": "run the command on all tabs (e.g. :tabdo q - closes all opened tabs)",
+        "answers": [[":tabdo command"]]
+      }
+    ]
+  },
+  {
+    "heading": "Working with multiple files",
+    "items": [
+      {
+        "description": "edit a file in a new buffer",
+        "answers": [[":e[dit] file"]]
+      },
+      {
+        "description": "go to the next buffer",
+        "answers": [[":bn[ext]"]]
+      },
+      {
+        "description": "go to the previous buffer",
+        "answers": [[":bp[revious]"]]
+      },
+      {
+        "description": "delete a buffer (close a file)",
+        "answers": [[":bd[elete]"]]
+      },
+      {
+        "description": "go to a buffer by index #",
+        "answers": [[":b[uffer]#"]]
+      },
+      {
+        "description": "go to a buffer by file",
+        "answers": [[":b[uffer] file"]]
+      },
+      {
+        "description": "list all open buffers",
+        "answers": [[":ls"], [":buffers"]]
+      },
+      {
+        "description": "open a file in a new buffer and split window",
+        "answers": [[":sp[lit] file"]]
+      },
+      {
+        "description": "open a file in a new buffer and vertically split window",
+        "answers": [[":vs[plit] file"]]
+      },
+      {
+        "description": "edit all buffers as vertical windows",
+        "answers": [[":vert[ical] ba[ll]"]]
+      },
+      {
+        "description": "edit all buffers as tabs",
+        "answers": [[":tab ba[ll]"]]
+      },
+      {
+        "description": "split window",
+        "answers": [["<ctrl>", "w", "s"]]
+      },
+      {
+        "description": "split window vertically",
+        "answers": [["<ctrl>", "w", "v"]]
+      },
+      {
+        "description": "switch windows",
+        "answers": [["<ctrl>", "w", "w"]]
+      },
+      {
+        "description": "quit a window",
+        "answers": [["<ctrl>", "w", "q"]]
+      },
+      {
+        "description": "exchange current window with next one",
+        "answers": [["<ctrl>", "w", "x"]]
+      },
+      {
+        "description": "make all windows equal height & width",
+        "answers": [["<ctrl>", "w", "="]]
+      },
+      {
+        "description": "move cursor to the left window (vertical split)",
+        "answers": [["<ctrl>", "w", "h"]]
+      },
+      {
+        "description": "move cursor to the right window (vertical split)",
+        "answers": [["<ctrl>", "w", "l"]]
+      },
+      {
+        "description": "move cursor to the window below (horizontal split)",
+        "answers": [["<ctrl>", "w", "j"]]
+      },
+      {
+        "description": "move cursor to the window above (horizontal split)",
+        "answers": [["<ctrl>", "w", "k"]]
+      },
+      {
+        "description": "make current window full height at far left (leftmost vertical window)",
+        "answers": [["<ctrl>", "w", "<shift>", "h"]]
+      },
+      {
+        "description": "make current window full height at far right (rightmost vertical window)",
+        "answers": [["<ctrl>", "w", "<shift>", "l"]]
+      },
+      {
+        "description": "make current window full width at the very bottom (bottommost horizontal window)",
+        "answers": [["<ctrl>", "w", "<shift>", "j"]]
+      },
+      {
+        "description": "make current window full width at the very top (topmost horizontal window)",
+        "answers": [["<ctrl>", "w", "<shift>", "k"]]
+      }
+    ]
+  },
+  {
+    "heading": "Diff",
+    "items": [
+      {
+        "description": "manually define a fold up to motion",
+        "answers": [["z", "f"]]
+      },
+      {
+        "description": "delete fold under the cursor",
+        "answers": [["z", "d"]]
+      },
+      {
+        "description": "toggle fold under the cursor",
+        "answers": [["z", "a"]]
+      },
+      {
+        "description": "open fold under the cursor",
+        "answers": [["z", "o"]]
+      },
+      {
+        "description": "close fold under the cursor",
+        "answers": [["z", "c"]]
+      },
+      {
+        "description": "reduce (open) all folds by one level",
+        "answers": [["z", "r"]]
+      },
+      {
+        "description": "fold more (close) all folds by one level",
+        "answers": [["z", "m"]]
+      },
+      {
+        "description": "toggle folding functionality",
+        "answers": [["z", "i"]]
+      },
+      {
+        "description": "jump to start of next change",
+        "answers": [["]c"]]
+      },
+      {
+        "description": "jump to start of previous change",
+        "answers": [["[c"]]
+      },
+      {
+        "description": "obtain (get) difference (from other buffer)",
+        "answers": [["d", "o"], [":diffg[et]"]]
+      },
+      {
+        "description": "put difference (to other buffer)",
+        "answers": [["d", "p"], [":diffpu[t]"]]
+      },
+      {
+        "description": "make current window part of diff",
+        "answers": [[":diffthis"]]
+      },
+      {
+        "description": "update differences",
+        "answers": [[":dif[fupdate]"]]
+      },
+      {
+        "description": "switch off diff mode for current window",
+        "answers": [[":diffo[ff]"]]
+      }
+    ]
+  }
+]
